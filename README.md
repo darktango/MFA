@@ -199,7 +199,7 @@
             <li><strong>Keep Software Updated:</strong> Regularly update your operating system, browsers, and security software to ensure they are equipped to defend against the latest threats.</li>
         </ul>
         
-        <a href="https://www.cisa.gov/news-events/news/phising-whats-name" class="cta-button" target="_blank">Learn more about Phishing Prevention</a>
+        <a href="https://www.occ.gov/topics/consumers-and-communities/consumer-protection/fraud-resources/phishing-attack-prevention.html" class="cta-button" target="_blank">Learn more about Phishing Prevention</a>
     </section>
 
     <!-- Additional Resources Section -->
