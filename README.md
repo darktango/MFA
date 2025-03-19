@@ -1,177 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Awareness</title>
-    <style>
-        /* Cyber Background Animation */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            overflow-x: hidden;
-        }
+/* Cyber Background Animation */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(to right, #0a192f, #172a45);
+    background-size: cover;
+    animation: gradientBackground 10s ease infinite;
+    z-index: -1;
+}
 
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            z-index: -2;
-        }
+@keyframes gradientBackground {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 
-        /* Matrix Falling Code Effect */
-        .matrix-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
+/* Navigation Menu */
+nav {
+    background-color: #111;
+    padding: 15px;
+    text-align: center;
+}
 
-        /* Cyber-Themed Grid Overlay */
-        .grid-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            background: url('https://www.transparenttextures.com/patterns/grid.png');
-            opacity: 0.1;
-            z-index: -1;
-        }
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        /* Header Styling */
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-            animation: fadeIn 2s forwards;
-        }
+.nav-menu li {
+    display: inline;
+    margin: 0 15px;
+}
 
-        /* Fade-In Animation */
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+.nav-menu a {
+    color: #00b894;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
 
-        h1, h2 {
-            color: #00ff99;
-            text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
-        }
+.nav-menu a:hover {
+    color: #e76f51;
+}
 
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-        }
+/* Header Styling */
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
 
-        /* Menu Button */
-        .menu-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: #00b894;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.9);
-            border-radius: 5px;
-            overflow: hidden;
-            width: 200px;
-        }
+h1, h2 {
+    color: #00b894;
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+}
 
-        .dropdown-menu a {
-            display: block;
-            padding: 10px;
-            color: white;
-            text-decoration: none;
-        }
+/* Menu Structure */
+<nav>
+    <ul class="nav-menu">
+        <li><a href="#mfa">Multi-Factor Authentication</a></li>
+        <li><a href="#healthcare">Healthcare Cybersecurity</a></li>
+        <li><a href="#phishing">Phishing & Onsite Threats</a></li>
+        <li><a href="#resources">Cybersecurity Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        .dropdown-menu a:hover {
-            background: #00ff99;
-        }
-    </style>
-</head>
-<body>
-    <div class="background"></div>
-    <canvas class="matrix-canvas"></canvas>
-    <div class="grid-overlay"></div>
+<section id="mfa">
+    <h2>Why Use Multi-Factor Authentication (MFA)</h2>
+    <p>Multi-Factor Authentication (MFA) adds an additional layer of security...</p>
+</section>
 
-    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
-    <div class="dropdown-menu" id="menu">
-        <a href="#">Home</a>
-        <a href="#">Cybersecurity</a>
-        <a href="#">Fake CAPTCHA</a>
-        <a href="#">Resources</a>
-    </div>
+<section id="healthcare">
+    <h2>Cyber Attacks in Healthcare: Protecting Valuable Data</h2>
+    <p>Healthcare data is some of the most valuable information in the world...</p>
+</section>
 
-    <header>
-        <h1>Cybersecurity Awareness: MFA & Healthcare</h1>
-        <p>Your Guide to Protecting Data & Using MFA</p>
-    </header>
+<section id="phishing">
+    <h2>Common Cyber Attacks: Phishing & Onsite Threats</h2>
+    <p>Cybercriminals employ various tactics to gain unauthorized access...</p>
+</section>
 
-    <section>
-        <h2>Why Use Multi-Factor Authentication (MFA)</h2>
-        <p>MFA adds an additional layer of security by requiring verification using two or more factors: something you know (password), something you have (phone), or something you are (fingerprint).</p>
-    </section>
+<section id="resources">
+    <h2>Helpful Resources to Further Understand Cybersecurity</h2>
+    <ul>
+        <li><a href="https://www.osinttechniques.com/" target="_blank">OSINT Techniques</a></li>
+        <li><a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank">Cybersecurity Best Practices</a></li>
+        <li><a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank">Cybersecurity Skills Tools</a></li>
+    </ul>
+</section>
 
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        }
+<section id="contact">
+    <h2>Get In Touch</h2>
+    <p>If you would like to know more about protecting your personal or organization’s data...</p>
+    <a href="mailto:contact@yourwebsite.com" class="cta-button">Contact Us</a>
+</section>
 
-        /* Matrix Falling Code Effect */
-        const canvas = document.querySelector('.matrix-canvas');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
-        const fontSize = 14;
-        const columns = canvas.width / fontSize;
-        const drops = [];
-
-        for (let i = 0; i < columns; i++) {
-            drops[i] = Math.floor(Math.random() * canvas.height / fontSize);
-        }
-
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#00ff99';
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters[Math.floor(Math.random() * letters.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-        setInterval(drawMatrix, 50);
-    </script>
-</body>
-</html>
+<footer>
+    <p>&copy; 2025 Your Website. All Rights Reserved.</p>
+</footer>
 
