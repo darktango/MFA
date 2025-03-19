@@ -56,5 +56,63 @@
     <footer>
         <p>&copy; 2025 Your Website. All Rights Reserved.</p>
     </footer>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #1e3c72 30%, #2a5298 100%);
+            z-index: -1;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            color: #00b894;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </body>
 </html>
