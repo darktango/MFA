@@ -1,58 +1,56 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Awareness: MFA & Healthcare</title>
+    <title>Cybersecurity Awareness</title>
     <style>
-        body {                                    
-            font-family: Arial, sans-serif;
+        /* Cyber Background Animation */
+        body {
             margin: 0;
-            padding: 0;
-            color: #fff;
-            background: #000;
-            overflow-y: scroll; /* Allow scrolling */
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-x: hidden;
         }
 
-        /* Cyber Background Animation */
         .background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, #00b894, #2d3436);
-            background-size: 400% 400%;
-            animation: gradientBackground 10s ease infinite;
+            background: black;
+            z-index: -2;
+        }
+
+        /* Matrix Falling Code Effect */
+        .matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
         }
 
-        @keyframes gradientBackground {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
-
-        /* Grid Overlay for Cyber Theme */
+        /* Cyber-Themed Grid Overlay */
         .grid-overlay {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
             background: url('https://www.transparenttextures.com/patterns/grid.png');
-            opacity: 0.2;
-            z-index: -2;
+            opacity: 0.1;
+            z-index: -1;
         }
 
         /* Header Styling */
         header {
-            background-color: #111;
-            color: #fff;
+            background-color: rgba(0, 0, 0, 0.8);
             padding: 20px;
             text-align: center;
-            opacity: 0;
             animation: fadeIn 2s forwards;
         }
 
@@ -63,7 +61,7 @@
         }
 
         h1, h2 {
-            color: #00b894;
+            color: #00ff99;
             text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
         }
 
@@ -73,158 +71,107 @@
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            animation: slideIn 1.5s ease-out;
         }
 
-        /* Slide-In Animation */
-        @keyframes slideIn {
-            0% { transform: translateY(50px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
-
-        p {
-            line-height: 1.6;
-            font-size: 1.1em;
-        }
-
-        a {
-            color: #2a9d8f;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
-
-        a:hover {
-            color: #00b894;
-            text-decoration: underline;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #e76f51;
+        /* Menu Button */
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #00b894;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.1em;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
+            cursor: pointer;
+            font-weight: bold;
         }
 
-        .cta-button:hover {
-            background-color: #00b894;
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 5px;
+            overflow: hidden;
+            width: 200px;
         }
 
-        footer {
-            text-align: center;
+        .dropdown-menu a {
+            display: block;
             padding: 10px;
-            background-color: #111;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            text-decoration: none;
         }
 
+        .dropdown-menu a:hover {
+            background: #00ff99;
+        }
     </style>
 </head>
 <body>
-    <!-- Background Animation -->
     <div class="background"></div>
-    <!-- Grid Overlay -->
+    <canvas class="matrix-canvas"></canvas>
     <div class="grid-overlay"></div>
 
-    <!-- Header Section -->
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+    <div class="dropdown-menu" id="menu">
+        <a href="#">Home</a>
+        <a href="#">Cybersecurity</a>
+        <a href="#">Fake CAPTCHA</a>
+        <a href="#">Resources</a>
+    </div>
+
     <header>
         <h1>Cybersecurity Awareness: MFA & Healthcare</h1>
         <p>Your Guide to Protecting Data & Using MFA</p>
-        <p>By: Travis DeWitt</p>
     </header>
 
-    <!-- MFA Section -->
     <section>
         <h2>Why Use Multi-Factor Authentication (MFA)</h2>
-        <p>Multi-Factor Authentication (MFA) adds an additional layer of security to your online accounts. It requires you to verify your identity using two or more factors: something you know (like a password), something you have (like a phone), or something you are (like a fingerprint).</p>
-        
-        <p>Why is MFA so important? Cybercriminals are constantly trying to breach online accounts. Adding MFA means that even if your password is compromised, hackers would still need another piece of information to access your account, making it much harder for them to succeed.</p>
-
-        <p>Examples of MFA include using SMS verification, authenticator apps like Google Authenticator, or even biometric factors like your fingerprint.</p>
-        
-        <a href="https://its.uky.edu/news/why-you-should-be-using-multifactor-authentication-all-your-online-accounts" class="cta-button" target="_blank">Learn more about MFA</a>
+        <p>MFA adds an additional layer of security by requiring verification using two or more factors: something you know (password), something you have (phone), or something you are (fingerprint).</p>
     </section>
 
-    <!-- Healthcare Cybersecurity Section -->
-    <section>
-        <h2>Cyber Attacks in Healthcare: Protecting Valuable Data</h2>
-        <p>Healthcare data is some of the most valuable information in the world, and cybercriminals know this. Hospitals, clinics, and other healthcare facilities house sensitive patient records, financial data, and other personal information that is a prime target for cyber attacks.</p>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
 
-        <p>In recent years, healthcare facilities have faced a surge in cyber attacks, including ransomware attacks, which can shut down entire hospital networks, compromising patient care. If patient data is compromised, it can have severe consequences, both for patients and the reputation of the healthcare provider.</p>
+        /* Matrix Falling Code Effect */
+        const canvas = document.querySelector('.matrix-canvas');
+        const ctx = canvas.getContext('2d');
 
-        <p>That’s why it's crucial for healthcare organizations to adopt cybersecurity best practices, including the implementation of MFA, to safeguard this sensitive information.</p>
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-        <a href="https://www.aha.org/center/cybersecurity-and-risk-advisory-services/ransomware-attacks-hospitals-have-changed" class="cta-button" target="_blank">Read more about ransomware attacks on healthcare</a>
-    </section>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%".split("");
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
 
-<!-- phising attacks 
-    <!-- Cyber Attacks & Phishing Section -->
-    <section>
-        <h2>Common Cyber Attacks: Phishing & Onsite Threats</h2>
-        <p>Cybercriminals employ various tactics to gain unauthorized access to systems, steal personal information, or infect networks. Among the most common methods are <strong>phishing attacks</strong> and <strong>onsite attacks</strong>. Let’s break down some of the key techniques hackers use to exploit these vulnerabilities.</p>
-        
-        <h3>1. Phishing Attacks</h3>
-        <p>Phishing attacks involve hackers impersonating legitimate organizations to trick victims into revealing sensitive information, such as passwords, credit card details, or login credentials. These attacks typically happen through email, social media, or fake websites.</p>
-        
-        <h4>Types of Phishing:</h4>
-        <ul>
-            <li><strong>Email Phishing:</strong> The most common form, where attackers send emails that appear to be from trusted sources (e.g., banks, online services). These emails often contain malicious links or attachments.</li>
-            <li><strong>Spear Phishing:</strong> A more targeted version of phishing, where the attacker customizes their message to a specific individual or organization. These emails are highly personalized and appear even more convincing.</li>
-            <li><strong>Vishing (Voice Phishing):</strong> Hackers use phone calls to impersonate legitimate organizations, like tech support or financial institutions, and ask for personal information. This can also happen through text messages (Smishing).</li>
-            <li><strong>Whaling:</strong> A type of spear phishing targeting high-level executives or influential individuals, often involving highly customized attacks to steal sensitive corporate information.</li>
-            <li><strong>Clone Phishing:</strong> The attacker creates a replica of a legitimate email previously sent by a trusted entity, replacing a link or attachment with a malicious one, tricking the recipient into clicking.</li>
-        </ul>
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.floor(Math.random() * canvas.height / fontSize);
+        }
 
-        <h3>2. Onsite Attacks</h3>
-        <p>In addition to online phishing, onsite attacks refer to incidents where hackers exploit vulnerabilities in physical locations or directly interact with the victim to gain unauthorized access. These attacks include:</p>
-        <ul>
-            <li><strong>USB Drops:</strong> Hackers leave infected USB drives in public places, hoping that someone will plug them into a computer, thereby introducing malware into the system.</li>
-            <li><strong>Social Engineering:</strong> Attackers manipulate people into divulging confidential information or bypassing security protocols. This could involve impersonating a colleague or service provider.</li>
-            <li><strong>Shoulder Surfing:</strong> Hackers observe individuals in public spaces, like cafes or airports, to gather sensitive data by watching them enter passwords or PINs on their devices.</li>
-            <li><strong>Physical Access Attacks:</strong> Attackers may attempt to gain physical access to an organization's premises, steal laptops, or tamper with security systems in order to extract sensitive information.</li>
-        </ul>
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff99';
+            ctx.font = fontSize + 'px monospace';
 
-        <h3>How to Protect Yourself from Phishing & Onsite Attacks:</h3>
-        <ul>
-            <li><strong>Verify Emails:</strong> Always check the sender’s email address before clicking on links or opening attachments. If in doubt, contact the organization directly through their official channels.</li>
-            <li><strong>Be Cautious of Unsolicited Requests:</strong> Whether it’s via email, phone, or in person, always question unsolicited requests for sensitive information.</li>
-            <li><strong>Use Multi-Factor Authentication (MFA):</strong> Implement MFA to add an extra layer of protection to your online accounts in case your password is compromised.</li>
-            <li><strong>Secure Physical Devices:</strong> Lock your computer and mobile devices when not in use, and avoid leaving them unattended in public spaces.</li>
-            <li><strong>Keep Software Updated:</strong> Regularly update your operating system, browsers, and security software to ensure they are equipped to defend against the latest threats.</li>
-        </ul>
-        
-        <a href="https://www.occ.gov/topics/consumers-and-communities/consumer-protection/fraud-resources/phishing-attack-prevention.html" class="cta-button" target="_blank">Learn more about Phishing Prevention</a>
-    </section>
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-    <!-- Additional Resources Section -->
-    <section>
-        <h2>Helpful Resources to Further Understand OSINT, Cybersecurity, and MFA</h2>
-        <p>Here are some great resources that you can explore to dive deeper into the world of Open Source Intelligence (OSINT), Cybersecurity, and the role of Multi-Factor Authentication (MFA) in protecting your data.</p>
-
-        <ul>
-            <li><a href="https://www.osinttechniques.com/" target="_blank">OSINT Techniques</a></li>
-            <li><a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank">Cybersecurity Best Practices</a></li>
-            <li><a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank">Cybersecurity Skills Tools</a></li>
-        </ul>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section>
-        <h2>Get In Touch</h2>
-        <p>If you would like to know more about protecting your personal or organization’s data, feel free to reach out for more information or consultation on OSINT, MFA, and overall cybersecurity.</p>
-
-        <a href="mailto:contact@yourwebsite.com" class="cta-button">Contact Us</a>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Your Website. All Rights Reserved.</p>
-    </footer>
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 50);
+    </script>
 </body>
 </html>
+
