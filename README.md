@@ -5,7 +5,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(to right, #0a192f, #172a45);
+    background: url('https://yourimagehost.com/your-cyber-theme-image.jpg'), linear-gradient(to right, #0a192f, #172a45);
+    background-repeat: no-repeat;
     background-size: cover;
     animation: gradientBackground 10s ease infinite;
     z-index: -1;
@@ -110,4 +111,3 @@ h1, h2 {
 <footer>
     <p>&copy; 2025 Your Website. All Rights Reserved.</p>
 </footer>
-
