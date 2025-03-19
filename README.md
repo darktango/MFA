@@ -40,9 +40,9 @@
     <section id="resources">
         <h2>Helpful Resources to Further Understand Cybersecurity</h2>
         <ul>
-            <li><a href="https://www.osinttechniques.com/" target="_blank">OSINT Techniques</a></li>
-            <li><a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank">Cybersecurity Best Practices</a></li>
-            <li><a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank">Cybersecurity Skills Tools</a></li>
+            <li><a href="https://www.osinttechniques.com/" target="_blank" rel="noopener noreferrer">OSINT Techniques</a></li>
+            <li><a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank" rel="noopener noreferrer">Cybersecurity Best Practices</a></li>
+            <li><a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank" rel="noopener noreferrer">Cybersecurity Skills Tools</a></li>
         </ul>
     </section>
 
@@ -55,76 +55,5 @@
     <footer>
         <p>&copy; 2025 Your Website. All Rights Reserved.</p>
     </footer>
-
-    <style>
-        /* Cyber Background Animation */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('your-image-folder/cyber-theme.jpg'), linear-gradient(to right, #0a192f, #172a45);
-            background-repeat: no-repeat;
-            background-size: cover;
-            animation: gradientBackground 10s ease infinite;
-            z-index: -1;
-        }
-
-        @keyframes gradientBackground {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
-
-        /* Navigation Menu */
-        nav {
-            background-color: #111;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .nav-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-menu li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        .nav-menu a {
-            color: #00b894;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: #e76f51;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #111;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        h1, h2 {
-            color: #00b894;
-            text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
-        }
-    </style>
 </body>
 </html>
