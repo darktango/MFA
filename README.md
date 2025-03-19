@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity Awareness</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Cyber Background Animation -->
@@ -40,9 +41,9 @@
     <section id="resources">
         <h2>Helpful Resources to Further Understand Cybersecurity</h2>
         <ul>
-            <li><a href="https://www.osinttechniques.com/" target="_blank" rel="noopener noreferrer">OSINT Techniques</a></li>
-            <li><a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank" rel="noopener noreferrer">Cybersecurity Best Practices</a></li>
-            <li><a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank" rel="noopener noreferrer">Cybersecurity Skills Tools</a></li>
+            <li><a href="https://www.osinttechniques.com/" target="_blank">OSINT Techniques</a></li>
+            <li><a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank">Cybersecurity Best Practices</a></li>
+            <li><a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank">Cybersecurity Skills Tools</a></li>
         </ul>
     </section>
 
