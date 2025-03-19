@@ -8,7 +8,8 @@
     <script defer src="script.js"></script>
     <style>
         body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: url('cybersecurity-wallpaper.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,41 +18,16 @@
             overflow: hidden;
         }
 
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, #1e3c72 30%, #2a5298 100%);
-            z-index: -1;
-            animation: cyberAnimation 10s infinite alternate ease-in-out;
-        }
-
-        @keyframes cyberAnimation {
-            0% {
-                filter: hue-rotate(0deg);
-                transform: scale(1);
-            }
-            100% {
-                filter: hue-rotate(360deg);
-                transform: scale(1.05);
-            }
-        }
-
         nav {
             background: rgba(0, 0, 0, 0.7);
             padding: 10px 0;
         }
 
         .nav-menu {
-            list-style: none;
             padding: 0;
-        }
-
-        .nav-menu li {
-            display: inline;
-            margin: 0 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         .nav-menu a {
@@ -78,18 +54,15 @@
     </style>
 </head>
 <body>
-    <!-- Cyber Background Animation -->
-    <div class="background"></div>
-
     <!-- Navigation Menu -->
     <nav>
-        <ul class="nav-menu">
-            <li><a href="#mfa">Multi-Factor Authentication</a></li>
-            <li><a href="#healthcare">Healthcare Cybersecurity</a></li>
-            <li><a href="#phishing">Phishing & Onsite Threats</a></li>
-            <li><a href="#resources">Cybersecurity Resources</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-menu">
+            <a href="#mfa">Multi-Factor Authentication</a>
+            <a href="#healthcare">Healthcare Cybersecurity</a>
+            <a href="#phishing">Phishing & Onsite Threats</a>
+            <a href="#resources">Cybersecurity Resources</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
     <!-- Content Sections -->
@@ -110,11 +83,11 @@
 
     <section id="resources">
         <h2>Helpful Resources to Further Understand Cybersecurity</h2>
-        <ul>
-            <li><a href="https://www.osinttechniques.com/" target="_blank">OSINT Techniques</a></li>
-            <li><a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank">Cybersecurity Best Practices</a></li>
-            <li><a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank">Cybersecurity Skills Tools</a></li>
-        </ul>
+        <p>
+            <a href="https://www.osinttechniques.com/" target="_blank">OSINT Techniques</a> | 
+            <a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank">Cybersecurity Best Practices</a> | 
+            <a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank">Cybersecurity Skills Tools</a>
+        </p>
     </section>
 
     <section id="contact">
