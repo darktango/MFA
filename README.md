@@ -90,7 +90,7 @@
         </div>
         <div class="section">
             <h2>Contact</h2>
-            <p>Have questions? Reach out to me at [(https://www.linkedin.com/in/travis-dewitt-03ba492b7/)]></p>
+           <p>Have questions? Connect with me on <a href="https://www.linkedin.com/in/travis-dewitt-03ba492b7/" target="_blank">LinkedIn</a></p>
         </div>
     </div>
 </body>
