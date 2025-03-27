@@ -3,102 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Awareness</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>My Cybersecurity Journey</title>
     <style>
         body {
-            background: url('cybersecurity-wallpaper.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Courier New', monospace;
+            text-align: center;
             margin: 0;
             padding: 0;
-            text-align: center;
-            overflow: hidden;
         }
-
-        nav {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px 0;
-        }
-
-        .nav-menu {
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .nav-menu a {
-            color: #00b894;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section {
+        .container {
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
-            margin: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
         }
-
-        footer {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        h1, h2 {
+            color: #58a6ff;
+        }
+        .section {
+            background: #161b22;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(88, 166, 255, 0.3);
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav>
-        <div class="nav-menu">
-            <a href="#mfa">Multi-Factor Authentication</a>
-            <a href="#healthcare">Healthcare Cybersecurity</a>
-            <a href="#phishing">Phishing & Onsite Threats</a>
-            <a href="#resources">Cybersecurity Resources</a>
-            <a href="#contact">Contact</a>
+    <div class="container">
+        <h1>My Journey</h1>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! Here, I document my journey through college and into my first IT job.</p>
         </div>
-    </nav>
-
-    <!-- Content Sections -->
-    <section id="mfa">
-        <h2>Why Use Multi-Factor Authentication (MFA)</h2>
-        <p>Multi-Factor Authentication (MFA) adds an additional layer of security...</p>
-    </section>
-
-    <section id="healthcare">
-        <h2>Cyber Attacks in Healthcare: Protecting Valuable Data</h2>
-        <p>Healthcare data is some of the most valuable information in the world...</p>
-    </section>
-
-    <section id="phishing">
-        <h2>Common Cyber Attacks: Phishing & Onsite Threats</h2>
-        <p>Cybercriminals employ various tactics to gain unauthorized access...</p>
-    </section>
-
-    <section id="resources">
-        <h2>Helpful Resources to Further Understand Cybersecurity</h2>
-        <p>
-            <a href="https://www.osinttechniques.com/" target="_blank">OSINT Techniques</a> | 
-            <a href="https://www.cisecurity.org/cybersecurity-best-practices/" target="_blank">Cybersecurity Best Practices</a> | 
-            <a href="https://brainstation.io/career-guides/what-tools-do-cybersecurity-analysts-use" target="_blank">Cybersecurity Skills Tools</a>
-        </p>
-    </section>
-
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>If you would like to know more about protecting your personal or organization’s data...</p>
-        <a href="mailto:contact@yourwebsite.com" class="cta-button">Contact Us</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Your Website. All Rights Reserved.</p>
-    </footer>
+        <div class="section">
+            <h2>Education</h2>
+            <p>South College - Studying Cybersecurity </p>
+        </div>
+        <div class="section">
+            <h2>Certifications</h2>
+            <p>CompTIA Security+ and more coming soon!</p>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <p>Coming soon: Reverse engineering projects, penetration testing labs, and more.</p>
+        </div>
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Connect with me on <a href="#">LinkedIn</a> or email me at dewitttravis@outlook.com</p>
+        </div>
+    </div>
 </body>
 </html>
-
