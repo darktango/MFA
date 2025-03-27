@@ -90,7 +90,7 @@
         </div>
         <div class="section">
             <h2>Contact</h2>
-            <p>Have questions? Reach out to me at <a href="mailto:dewitttravis@outlook.com">dewitttravis@outlook.com</a></p>
+            <p>Have questions? Reach out to me at [<a href="mailto:dewitttravis@outlook.com"](https://www.linkedin.com/in/travis-dewitt-03ba492b7/)></p>
         </div>
     </div>
 </body>
